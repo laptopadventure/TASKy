@@ -1,0 +1,30 @@
+
+.Panel {
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.light .Panel {
+  border: 3px solid black;
+  background-color: var(--Panel-light);
+}
+
+.dark .Panel {
+  border: 3px solid white;
+  background-color: var(--Panel-dark);
+}
+
+.panel-header {
+  margin: -1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 24px;
+}
+
+.light .panel-header {
+  border-bottom: 3px solid black;
+}
+
+.dark .panel-header {
+  border-bottom: 3px solid white;
+}
