@@ -1,14 +1,32 @@
 import './Main.css';
 import Panel from '../Panel/Panel';
+import Form from '../Form/Form';
+import TaskList from '../TaskList/TaskList';
+import { useLocalStorage } from '@mantine/hooks';
+
+export type Task = {
+  content: string;
+  severity: 1|2|3; //our code is unionized
+}
 
 function Main() {
+  const [tasks, setTasks] = useLocalStorage<Task[]>({key: 'tasks', defaultValue: []})
+
+  function handleForm(values: Task) {
+    setTasks([...tasks, values])
+  }
+
+  function removeTask(taskIndex: number) {
+    setTasks([...tasks].splice(taskIndex, 1))
+  }
+
   return (
     <div className="Main">
-      <Panel headerText="New Tasks">
-        form
+      <Panel inHeader="New Tasks">
+        <Form handleForm={handleForm}/>
       </Panel>
-      <Panel headerText="Task List">
-        bunch of cards
+      <Panel inHeader="Task List">
+        <TaskList removeTask={removeTask} tasks={tasks} />
       </Panel>
     </div>
   );

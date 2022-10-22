@@ -7,8 +7,10 @@
 
 .light .Footer {
   background-color: var(--panel-light);
+  border-top: 3px solid black;
 }
 
 .dark .Footer {
   background-color: var(--panel-dark);
+  border-top: 3px solid white;
 }

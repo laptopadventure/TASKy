@@ -1,8 +1,8 @@
 :root {
   --background-light: #d1cbb4;
-  --panel-light: #6765e7;
+  --panel-light: rgba(101, 142, 231, 0.75);
   --background-dark: #1d241f;
-  --panel-dark: #173b17;
+  --panel-dark: rgb(23, 59, 23, 0.75);
 }
 
 body, html, .App {
@@ -14,7 +14,7 @@ body, html, .App {
 }
 
 .dark {
-  background-color: #1d241f;
+  background-color: var(--background-dark);
   color: antiquewhite;
 }
 

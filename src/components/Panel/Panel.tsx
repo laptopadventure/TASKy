@@ -1,15 +1,15 @@
 import './Panel.css';
+import React from 'react'
 
 type PanelProps = {
-  headerText?: string,
-  children: JSX.Element | string
+  inHeader?: React.ReactNode;
 }
 
-function Panel({headerText, children}: PanelProps) {
+function Panel({inHeader, children, style, className}: React.PropsWithChildren<PanelProps> & React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className="Panel">
-      {headerText && (
-        <div className="panel-header">{headerText}</div>
+    <div style={style} className={`Panel ${className}`}>
+      {inHeader && (
+        <div className="panel-header">{inHeader}</div>
       )}
       {children}
     </div>

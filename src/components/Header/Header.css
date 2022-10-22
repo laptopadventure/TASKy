@@ -1,17 +1,19 @@
 
 .Header {
-  padding: 1rem;
+  padding: 1.5rem;
   display: flex;
   justify-content: space-between;
-  font-size: 24px;
+  font-size: 30px;
 }
 
 .light .Header {
   background-color: var(--panel-light);
+  border-bottom: 3px solid black;
 }
 
 .dark .Header {
   background-color: var(--panel-dark);
+  border-bottom: 3px solid white;
 }
 
 .style-icon {
