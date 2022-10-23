@@ -1,0 +1,9 @@
+
+.Main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Main > * {
+  margin: auto 0;
+}
