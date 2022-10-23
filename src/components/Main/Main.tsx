@@ -13,11 +13,13 @@ function Main() {
   const [tasks, setTasks] = useLocalStorage<Task[]>({key: 'tasks', defaultValue: []})
 
   function handleForm(values: Task) {
-    setTasks([...tasks, values])
+    setTasks([...tasks, values]);
   }
 
   function removeTask(taskIndex: number) {
-    setTasks([...tasks].splice(taskIndex, 1))
+    const newTasks = [...tasks];
+    newTasks.splice(taskIndex, 1);
+    setTasks(newTasks);
   }
 
   return (
