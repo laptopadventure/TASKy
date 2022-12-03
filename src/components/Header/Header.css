@@ -4,6 +4,11 @@
   display: flex;
   justify-content: space-between;
   font-size: 30px;
+  line-height: 53px;
+}
+
+.Header > div {
+  margin: 0 1rem;
 }
 
 .light .Header {
